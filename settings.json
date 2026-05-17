@@ -1,0 +1,246 @@
+{
+    // UI & Appearance
+    "editor.fontSize": 16,
+    "terminal.integrated.fontSize": 16,
+    "window.zoomLevel": -1,
+    "breadcrumbs.enabled": true,
+    "editor.fontFamily": "'JetBrains Mono Nerd Font'",
+    "editor.minimap.enabled": false,
+
+    // Editor Features
+    // Bracket-pair settings
+    "editor.bracketPairColorization.enabled": false,
+    "editor.guides.bracketPairsHorizontal": false,
+    "editor.guides.highlightActiveBracketPair": false,
+
+    // Suggestions and IntelliSense
+    "editor.inlayHints.enabled": "on",
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggest.showInlineDetails": true,
+    "editor.suggest.preview": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+
+    // Vim Extension
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.vimrc.enable": true,
+    "vim.leader": "<Space>",
+
+    // Vim keybindings - Insert mode
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+
+    // Vim keybindings - Normal mode
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Navigation (wrapped lines)
+        { "before": ["j"], "after": ["g", "j"] },
+        { "before": ["k"], "after": ["g", "k"] },
+
+        // Tabs
+        { "before": ["<S-h>"], "commands": [":bprevious"] },
+        { "before": ["<S-l>"], "commands": [":bnext"] },
+
+        // Splits
+        { "before": ["leader", "v"], "commands": [":vsplit"] },
+        { "before": ["leader", "s"], "commands": [":split"] },
+
+        // Pane navigation
+        {
+            "before": ["leader", "h"],
+            "commands": ["workbench.action.focusLeftGroup"]
+        },
+        {
+            "before": ["leader", "j"],
+            "commands": ["workbench.action.focusBelowGroup"]
+        },
+        {
+            "before": ["leader", "k"],
+            "commands": ["workbench.action.focusAboveGroup"]
+        },
+        {
+            "before": ["leader", "l"],
+            "commands": ["workbench.action.focusRightGroup"]
+        },
+
+        // LSP commands
+        // Go to Definition
+        {
+            "before": ["g", "d"],
+            "commands": ["editor.action.goToDefinition"]
+        },
+        // Peek Definition
+        {
+            "before": ["g", "p", "d"],
+            "commands": ["editor.action.peekDefinition"]
+        },
+        // Show Hover
+        {
+            "before": ["g", "h"],
+            "commands": ["editor.action.showDefinitionPreviewHover"]
+        },
+        // Go to Implementations
+        {
+            "before": ["g", "i"],
+            "commands": ["editor.action.goToImplementation"]
+        },
+        // Peek Implementations
+        {
+            "before": ["g", "p", "i"],
+            "commands": ["editor.action.peekImplementation"]
+        },
+        // Quick fix
+        {
+            "before": ["g", "q"],
+            "commands": ["editor.action.quickFix"]
+        },
+        // Go to References
+        {
+            "before": ["g", "r"],
+            "commands": ["editor.action.referenceSearch.trigger"]
+        },
+        // Go to Type Definition
+        {
+            "before": ["g", "t"],
+            "commands": ["editor.action.goToTypeDefinition"]
+        },
+        // Peek Type Definition
+        {
+            "before": ["g", "p", "t"],
+            "commands": ["editor.action.peekTypeDefinition"]
+        },
+
+        // Other commands
+        {
+            "before": ["leader", "f", "r"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["leader", "f", "s"],
+            "commands": ["workbench.action.showAllSymbols"]
+        },
+        {
+            "before": ["leader", "c", "f"],
+            "commands": ["editor.action.formatDocument"]
+        },
+        {
+            "before": ["leader", "w", "e"],
+            "commands": ["workbench.view.explorer"]
+        },
+        {
+            "before": ["leader", "e"],
+            "commands": ["workbench.action.focusActiveEditorGroup"]
+        },
+
+        // Rename symbol
+        {
+            "before": ["leader", "c", "r"],
+            "commands": ["editor.action.rename"]
+        },
+
+        // Go to next error
+        {
+            "before": ["g", "e"],
+            "commands": ["editor.action.marker.next"]
+        },
+
+        // Go to previous error
+        {
+            "before": ["g", "E"],
+            "commands": ["editor.action.marker.prev"]
+        }
+    ],
+
+    // Vim keybindings - Visual mode
+    "vim.visualModeKeyBindings": [
+        { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+        { "before": [">"], "commands": ["editor.action.indentLines"] }
+    ],
+
+    // Language & Analysis
+    "python.analysis.typeCheckingMode": "basic",
+
+    // Workbench & Layout
+    "workbench.layoutControl.enabled": false,
+    "chat.commandCenter.enabled": false,
+    "workbench.navigationControl.enabled": false,
+
+    // Extensions & AI
+    "redhat.telemetry.enabled": false,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "solidity": true
+    },
+
+    // File Handling
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.simpleDialog.enable": true,
+
+    // Explorer
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "workbench.startupEditor": "none",
+    "ansible.lightspeed.enabled": false,
+    "ansible.python.interpreterPath": "/home/gunter/Programming/k8s/ansible/venv/bin/python",
+    "chat.tools.urls.autoApprove": {
+        "https://docs.cilium.io": true,
+        "https://raw.githubusercontent.com": {
+            "approveRequest": false,
+            "approveResponse": true
+        },
+        "https://github.com": true,
+        "https://*.yandexcloud.net": true,
+        "https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/alb_virtual_host": true,
+        "https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources": true,
+        "https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs": true,
+        "https://registry.terraform.io/providers/yandex-cloud/yandex/latest": true,
+        "https://registry.terraform.io/providers/yandex-cloud/yandex": true,
+        "https://registry.terraform.io/providers/yandex-cloud": true,
+        "https://registry.terraform.io/providers": true,
+        "https://registry.terraform.io": true,
+        "https://*.terraform.io": true
+    },
+    "[haskell]": {
+        "editor.defaultFormatter": "haskell.haskell"
+    },
+    "haskell.formattingProvider": "none",
+    "haskell.cabalFormattingProvider": "none",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.codeLens.enabled": false,
+    "haskell.plugin.hlint.diagnosticsOn": false,
+    "extensions.autoUpdate": false,
+    "gitlab.duoCodeSuggestions.enabled": false,
+    "gitlab.duoChat.enabled": false,
+    "gitlab.duoAgentPlatform.enabled": false,
+    "gitlab.duo.enabledWithoutGitlabProject": false,
+    "gitlab.duoCodeSuggestions.openTabsContext": false,
+    "gitlab.keybindingHints.enabled": false,
+    "jupyter.askForKernelRestart": false,
+    "remote.extensionKind": {
+        "github.copilot": ["ui"],
+        "github.copilot-chat": ["ui"]
+    },
+    "chat.viewSessions.orientation": "stacked",
+    "workbench.colorTheme": "Dark Modern",
+    "http.proxy": "http://127.0.0.1:10808",
+    "http.proxySupport": "on"
+
+}
